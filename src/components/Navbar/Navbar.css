@@ -10,6 +10,7 @@
 
 .navbar-user {
     background-color: #3A404E;
+    z-index: 2;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.6);
 }
 

@@ -4,20 +4,28 @@ import React, { Component, useState, useEffect } from 'react';
 import Player from './components/Player/Player';
 import Fakedata from './Fakedata/Fakedata.json';
 import Navbar from './components/Navbar/Navbar'
+import Calculation from './components/Calculation/Calculation'
 import './App.css';
 function App() {
   document.body.style = "background-color: #333945";
-  const [players, setPlayers] = useState([]);
+  let [players, setPlayers] = useState([]);
+  // to handle duplicate players
+  let [keys, setkeys] = useState([]);
   const handleHire = (player) => {
-    setPlayers([...players, player]);
-    console.log(players);
+    if (keys.includes(player.id) === false) {
+      keys = [...keys, player.id];
+      players = [...players, player];
+      setPlayers(players);
+      setkeys(keys);
+    }
   }
   return (
     <div className="App">
       <Navbar></Navbar>
+      <Calculation players={players}></Calculation>
       <div className="players-list">
         {
-          Fakedata.map(player => <Player handleHire = {handleHire} key={player.id} player={player} />)
+          Fakedata.map(player => <Player handleHire={handleHire} key={player.id} player={player} />)
         }
       </div>
     </div>
