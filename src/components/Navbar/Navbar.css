@@ -1,0 +1,18 @@
+.logo {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.icon {
+    font-size: 28px;
+}
+
+.navbar-user {
+    background-color: #3A404E;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+.color-white {
+    color: white;
+}
