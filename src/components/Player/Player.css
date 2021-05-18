@@ -1,5 +1,6 @@
 .player {
-    height: 430px;
+    height: 470px;
+    max-width: 340px;
     border-radius: 20px;
     color: white;
     display: flex;

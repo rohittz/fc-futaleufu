@@ -21,7 +21,19 @@ header span {
   padding: 0px 20px;
 }
 
+.players-container {
+  width: 100%;
+  height: min-content;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .players-list {
+  width: 100%;
+  max-width: 1500px;
+  height: min-content;
   display: grid;
   padding: 30px 100px;
   grid-template-columns: repeat(4, 1fr);
@@ -31,40 +43,43 @@ header span {
   justify-content: center;
   margin-bottom: 100px;
 }
+
 /* Extra small devices (phones, 600px and down) */
+
 @media only screen and (max-width: 600px) {
-  .players-list{
+  .players-list {
     grid-template-columns: 1fr;
-    padding: 30px 40px;
   }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
+
 @media only screen and (min-width: 600px) {
-  .players-list{
+  .players-list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
+
 @media only screen and (min-width: 768px) {
-  .players-list{
-  grid-template-columns: repeat(2, 1fr);
+  .players-list {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
+
 @media only screen and (min-width: 992px) {
-  .players-list{
+  .players-list {
     grid-template-columns: repeat(3, 1fr);
-    padding: 30px 70px;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
+
 @media only screen and (min-width: 1200px) {
-  .players-list{
+  .players-list {
     grid-template-columns: repeat(4, 1fr);
-    padding: 30px 120px;
   }
 }

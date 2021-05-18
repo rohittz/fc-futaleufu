@@ -23,10 +23,12 @@ function App() {
     <div className="App">
       <Navbar></Navbar>
       <Calculation players={players}></Calculation>
-      <div className="players-list">
-        {
-          Fakedata.map(player => <Player handleHire={handleHire} key={player.id} player={player} />)
-        }
+      <div className="players-container">
+        <div className="players-list">
+          {
+            Fakedata.map(player => <Player handleHire={handleHire} key={player.id} player={player} />)
+          }
+        </div>
       </div>
     </div>
   );
